@@ -32,6 +32,10 @@ app.use("/api/cart", cartRoutes);
 app.use("/api/address", addressRoutes);
 app.use("/api/order", orderRoutes);
 
+app.get("/", (req, res) => {
+  res.send("✅ Shoppingly backend is running.");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   connectDB();
